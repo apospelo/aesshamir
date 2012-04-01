@@ -101,17 +101,19 @@ we can add for every $i$ a random $r$ to $c_k$ and a random $r \cdot
 
 The previous countermeasure is secure against $d/2$-th order masking.
 
-\end{document}
+\section{A Variant}
 
+One could object that the previous countermeasure is not stricly based
+on Shamir's secret-sharing scheme, since the shares $P(x_i)$ are never
+computed. 
 
-
-
-
-
-
-
-
-
-
+We can still have a variant of the Goubin-Martinelli countermeasure
+with complexity $d^2 \cdot \log^4 d$ by modifying their Algorithm 1
+for sharing a secret $a_0$. Their procedure consists in generating a
+random polynomial $P(x)$ of degree $d-1$ and then computing $P(x_i)$ for
+$d$ values of $x_i$. This can be done in time $d \cdot \log^4 d$
+instead of $d^2$; hence the full running time becomes in $d^2 \cdot
+\log^4 d$ instead of $d^3$. This remains secure because this
+computation is done locally for every player.
 
 \end{document}
